@@ -9,7 +9,10 @@
             <div class="footer__content">
                 <!-- Company Info -->
                 <div class="footer__section">
-                    <h4>Vazirlo</h4>
+                    <div class="footer__brand">
+                        <img src="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/logo.webp" alt="Vazirlo логотип" class="footer__logo">
+                        <h4>Vazirlo</h4>
+                    </div>
                     <p>Профессиональные услуги веб-аналитики для повышения эффективности вашего бизнеса.</p>
                     <div class="contact-item">
                         <div class="contact-icon" aria-hidden="true">📍</div>

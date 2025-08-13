@@ -202,7 +202,7 @@ class SmoothScroll {
 // ===== INTERSECTION OBSERVER ANIMATIONS =====
 class ScrollAnimations {
   constructor() {
-    this.elements = $$('.fade-in, .slide-up');
+    this.elements = $$('.fade-in, .slide-up, .slide-left, .slide-right, .bounce-in');
     this.init();
   }
   
@@ -213,25 +213,42 @@ class ScrollAnimations {
       // Fallback: show all elements immediately
       this.elements.forEach(el => el.classList.add('visible'));
     }
+    
+    // Add staggered delays to grid items
+    this.addStaggeredDelays();
   }
   
   setupObserver() {
     const options = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -30px 0px'
     };
     
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          // Don't unobserve to allow repeated animations if needed
+          // observer.unobserve(entry.target);
         }
       });
     }, options);
     
     this.elements.forEach(el => {
       observer.observe(el);
+    });
+  }
+  
+  addStaggeredDelays() {
+    // Add delays to grid items for staggered animation
+    const grids = $$('.grid');
+    grids.forEach(grid => {
+      const items = grid.querySelectorAll('.card, .team-member, .pricing-card');
+      items.forEach((item, index) => {
+        if (index < 5) {
+          item.classList.add(`animation-delay-${index + 1}`);
+        }
+      });
     });
   }
 }

@@ -53,10 +53,9 @@ $site_description = "Повышение продаж через веб-анал�
     <meta name="twitter:image" content="<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>/assets/img/dashboard-hero.jpg">
     
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/favicon.png">
     
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,20 +104,19 @@ $site_description = "Повышение продаж через веб-анал�
     <?php endif; ?>
 </head>
 <body>
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="skip-to-content">Перейти к основному содержанию</a>
+    
     
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
             <div class="header__container">
-                <!-- Logo -->
-                <a href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>index.php" class="logo" aria-label="Vazirlo - Главная страница">
+                <!-- Logo Text -->
+                <a href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>index.php" class="logo-text" aria-label="Vazirlo - Главная страница">
                     Vazirlo
                 </a>
                 
                 <!-- Navigation -->
-                <nav class="nav" role="navigation" aria-label="Основная навигация">
+                <nav class="nav" id="navigation" role="navigation" aria-label="Основная навигация">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>index.php" 
@@ -149,12 +147,12 @@ $site_description = "Повышение продаж через веб-анал�
                             </a>
                         </li>
                     </ul>
-                    
-                    <!-- CTA Button -->
-                    <a href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>contacts.php" class="btn btn--primary">
-                        Получить консультацию
-                    </a>
                 </nav>
+                
+                <!-- Logo Image -->
+                <a href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>index.php" class="logo-image" aria-label="Vazirlo - Главная страница">
+                    <img src="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/logo.webp" alt="Vazirlo логотип" width="40" height="40">
+                </a>
                 
                 <!-- Mobile menu burger -->
                 <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navigation">
