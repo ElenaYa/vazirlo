@@ -1,12 +1,12 @@
 <?php
-/* legal/imprint.php */
+/* legal/terms.php */
 
-$page_title = "Импрессум";
-$page_description = "Импрессум Vazirlo - юридическая информация о компании, регистрационные данные, контактная информация и ответственные лица.";
+$page_title = "Условия использования";
+$page_description = "Условия использования Vazirlo — правила и условия посещения и использования сайта vazirlo.com.";
 
 $breadcrumbs = [
     ['name' => 'Главная', 'url' => 'https://' . $_SERVER['HTTP_HOST'] . '/index.php'],
-    ['name' => 'Импрессум', 'url' => 'https://' . $_SERVER['HTTP_HOST'] . '/legal/imprint.php']
+    ['name' => 'Условия использования', 'url' => 'https://' . $_SERVER['HTTP_HOST'] . '/legal/terms.php']
 ];
 
 include '../partials/header.php';
@@ -16,9 +16,9 @@ include '../partials/header.php';
 <section class="section section--hero">
     <div class="container">
         <div class="text-center fade-in">
-            <h1>Импрессум</h1>
+            <h1>Условия использования</h1>
             <p class="hero__subtitle">
-                Юридическая информация и сведения о компании Vazirlo
+                Правила и условия использования сайта Vazirlo
             </p>
             <p style="color: var(--muted); font-size: var(--font-size-sm);">
                 Информация актуальна на <?php echo date('d.m.Y'); ?>
@@ -104,4 +104,11 @@ include '../partials/header.php';
                                      <a href="https://vazirlo.com" target="_blank">vazirlo.com</a>
                                 </div>
                             </div>
-                        </div
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<?php include '../partials/footer.php'; ?>
