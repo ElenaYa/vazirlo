@@ -476,7 +476,7 @@ class CookieBanner {
   constructor() {
     this.banner = $('.cookie-banner');
     this.acceptBtn = $('.cookie-banner__btn--accept');
-    this.settingsBtn = $('.cookie-banner__btn--settings');
+    this.declineBtn = $('.cookie-banner__btn--decline');
     this.storageKey = 'cookieConsent';
     
     this.init();
@@ -486,8 +486,22 @@ class CookieBanner {
     if (!this.banner) return;
     
     // Check if user has already given consent
-    const consent = localStorage.getItem(this.storageKey);
-    if (!consent) {
+    try {
+      const consent = localStorage.getItem(this.storageKey);
+      if (!consent) {
+        this.showBanner();
+      } else {
+        // Try to parse if it's JSON, if not, treat as old format
+        try {
+          JSON.parse(consent);
+        } catch (e) {
+          // Old format, clear and show banner
+          localStorage.removeItem(this.storageKey);
+          this.showBanner();
+        }
+      }
+    } catch (e) {
+      // localStorage not available or other error
       this.showBanner();
     }
     
@@ -496,8 +510,8 @@ class CookieBanner {
       this.acceptBtn.addEventListener('click', () => this.acceptCookies());
     }
     
-    if (this.settingsBtn) {
-      this.settingsBtn.addEventListener('click', () => this.openSettings());
+    if (this.declineBtn) {
+      this.declineBtn.addEventListener('click', () => this.declineCookies());
     }
     
     // Handle escape key
@@ -524,19 +538,33 @@ class CookieBanner {
   }
   
   acceptCookies() {
-    localStorage.setItem(this.storageKey, JSON.stringify({
-      necessary: true,
-      analytics: true,
-      marketing: true,
-      timestamp: Date.now()
-    }));
+    try {
+      localStorage.setItem(this.storageKey, JSON.stringify({
+        necessary: true,
+        analytics: true,
+        marketing: true,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      console.warn('Could not save cookie preferences:', e);
+    }
     
     this.hideBanner();
   }
   
-  openSettings() {
-    // Redirect to cookies page
-    window.location.href = 'legal/cookies.php';
+  declineCookies() {
+    try {
+      localStorage.setItem(this.storageKey, JSON.stringify({
+        necessary: true,
+        analytics: false,
+        marketing: false,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      console.warn('Could not save cookie preferences:', e);
+    }
+    
+    this.hideBanner();
   }
 }
 

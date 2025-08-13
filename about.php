@@ -356,6 +356,41 @@ include 'partials/header.php';
             </div>
         </div>
         
+        <!-- Case Study 3 - Detailed -->
+        <div id="case-study-3" class="card slide-up mb-xl">
+            <div class="grid grid--2">
+                <div>
+                    <img src="assets/img/case-study-3.jpg" 
+                         alt="Оптимизация конверсии образовательной платформы"
+                         loading="lazy" width="400" height="300"
+                         style="border-radius: var(--radius-md);">
+                </div>
+                <div>
+                    <h3 style="color: var(--primary);">Образовательная онлайн-платформа</h3>
+                    <div class="mb-md">
+                        <span class="kpi-badge">+240% регистрации</span>
+                        <span class="kpi-badge">+€125k ARR</span>
+                    </div>
+                    
+                    <h4>Проблема:</h4>
+                    <p>Низкая конверсия из trial в платную подписку (8%). Пользователи регистрировались, 
+                    но не проходили полный onboarding и не видели ценность продукта.</p>
+                    
+                    <h4>Решение:</h4>
+                    <ul style="margin-left: var(--space-md);">
+                        <li>Настроили funnel tracking от первого визита до оплаты</li>
+                        <li>Провели user journey mapping и выявили точки отвала</li>
+                        <li>Оптимизировали onboarding через серию A/B тестов</li>
+                        <li>Внедрили персонализированные email-кампании</li>
+                        <li>Добавили in-app нотификации и progress tracking</li>
+                    </ul>
+                    
+                    <h4>Результат:</h4>
+                    <p><strong>Trial-to-paid конверсия выросла с 8% до 27.2% за 5 месяцев</strong></p>
+                </div>
+            </div>
+        </div>
+        
         <div class="text-center">
             <a href="contacts.php" class="btn btn--primary btn--large">Обсудить ваш проект</a>
         </div>

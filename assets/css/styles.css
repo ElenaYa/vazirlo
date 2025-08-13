@@ -1212,10 +1212,15 @@
     border: 1px solid var(--primary);
   }
   
-  .cookie-banner__btn--settings {
+  .cookie-banner__btn--decline {
     background: transparent;
     color: white;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .cookie-banner__btn--decline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
   }
   
   /* ===== FOOTER ===== */

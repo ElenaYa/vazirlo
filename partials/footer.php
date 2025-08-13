@@ -103,8 +103,8 @@
                     </p>
                 </div>
                 <div class="cookie-banner__actions">
-                    <button class="cookie-banner__btn cookie-banner__btn--settings" aria-label="Настроить cookies">
-                        Настроить
+                    <button class="cookie-banner__btn cookie-banner__btn--decline" aria-label="Отклонить cookies">
+                        Отклонить
                     </button>
                     <button class="cookie-banner__btn cookie-banner__btn--accept" aria-label="Принять все cookies">
                         Принять все
