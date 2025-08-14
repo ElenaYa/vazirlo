@@ -104,7 +104,7 @@
                     <a href="<?php echo ($current_dir === 'legal') ? '' : 'legal/'; ?>privacy-gdpr.php">GDPR</a>
                     <a href="<?php echo ($current_dir === 'legal') ? '' : 'legal/'; ?>cookies.php">Cookies</a>
                     <a href="<?php echo ($current_dir === 'legal') ? '' : 'legal/'; ?>terms.php">Условия использования</a>
-                    <a href="<?php echo ($current_dir === 'legal') ? '' : 'legal/'; ?>imprint.php">Импрессум</a>
+                    
                 </nav>
             </div>
         </div>

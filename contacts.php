@@ -13,15 +13,28 @@ include 'partials/header.php';
 ?>
 
 <!-- Hero Section -->
-<section class="section section--hero">
+<section class="section section--hero analytics-bg">
     <div class="container">
-        <div class="text-center fade-in">
-            <h1>Свяжитесь с нами</h1>
-            <p class="hero__subtitle">
-                Готовы обсудить ваш проект? Мы ответим в течение 2 часов в рабочее время
-            </p>
+        <div class="hero">
+            <div class="hero__grid">
+                <div class="hero__media slide-left">
+                    <img src="assets/img/contacts-hero.jpg"
+                         alt="Команда Vazirlo на связи — современный офис, ноутбуки и консультации по веб-аналитике"
+                         loading="eager" width="900" height="560">
+                </div>
+                <div class="hero__content slide-right">
+                    <h1 class="hero__title">Свяжитесь с нами</h1>
+                    <p class="hero__subtitle">
+                        Готовы обсудить ваш проект? Мы ответим в течение 2 часов в рабочее время
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#contact-form" class="btn btn--primary btn--large">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
 </section>
 
 <!-- Contact Form & Info Section -->
@@ -127,16 +140,26 @@ include 'partials/header.php';
                     <h3 style="margin-bottom: var(--space-lg);">Контактная информация</h3>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Адрес офиса</strong><br>
-                            Karadžičova 8<br>
-                            821 08 Bratislava, Slovakia
+                            <a href="https://maps.google.com/?q=Karadžičova+8,+821+08+Bratislava,+Slovakia" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">
+                                Karadžičova 8, 821 08 Bratislava, Slovakia
+                            </a>
                         </div>
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">📞</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92V19a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3 4.18 2 2 0 0 1 5 2h2.09a2 2 0 0 1 2 1.72c.12.86.33 1.7.63 2.5a2 2 0 0 1-.45 2.11L8.1 9.9a16 16 0 0 0 6 6l1.57-1.57a2 2 0 0 1 2.11-.45c.8.3 1.64.51 2.5.63A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Телефон</strong><br>
                             <a href="tel:+421940327781" style="color: var(--primary);">+421 940 327 781</a>
@@ -144,7 +167,12 @@ include 'partials/header.php';
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Email</strong><br>
                             <a href="mailto:hello@vazirlo.com" style="color: var(--primary);">hello@vazirlo.com</a>
@@ -152,7 +180,12 @@ include 'partials/header.php';
                     </div>
                     
                     <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Часы работы</strong><br>
                             Понедельник – Пятница<br>
@@ -204,51 +237,6 @@ include 'partials/header.php';
                class="btn btn--secondary">
                 Открыть в Google Maps
             </a>
-        </div>
-    </div>
-</section>
-
-<!-- Alternative Contact Methods -->
-<section class="section">
-    <div class="container">
-        <div class="text-center mb-2xl fade-in">
-            <h2>Другие способы связи</h2>
-            <p class="text-large text-muted">Выберите удобный для вас способ</p>
-        </div>
-        
-        <div class="grid grid--3 slide-up">
-            <div class="card text-center">
-                <div class="card__content">
-                    <div style="background: var(--primary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md); font-size: var(--font-size-xl);">
-                        📞
-                    </div>
-                    <h3>Звонок</h3>
-                    <p class="text-muted">Обсудим задачи по телефону</p>
-                    <a href="tel:+421940327781" class="btn btn--primary">Позвонить</a>
-                </div>
-            </div>
-            
-            <div class="card text-center">
-                <div class="card__content">
-                    <div style="background: var(--primary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md); font-size: var(--font-size-xl);">
-                        ✉️
-                    </div>
-                    <h3>Email</h3>
-                    <p class="text-muted">Отправьте детали проекта</p>
-                    <a href="mailto:hello@vazirlo.com" class="btn btn--primary">Написать</a>
-                </div>
-            </div>
-            
-            <div class="card text-center">
-                <div class="card__content">
-                    <div style="background: var(--primary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md); font-size: var(--font-size-xl);">
-                        📅
-                    </div>
-                    <h3>Встреча</h3>
-                    <p class="text-muted">Личная консультация в офисе</p>
-                    <a href="mailto:hello@vazirlo.com?subject=Запрос на встречу" class="btn btn--primary">Записаться</a>
-                </div>
-            </div>
         </div>
     </div>
 </section>
