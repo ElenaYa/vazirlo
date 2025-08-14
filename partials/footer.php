@@ -15,11 +15,16 @@
                     </div>
                     <p>Профессиональные услуги веб-аналитики для повышения эффективности вашего бизнеса.</p>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true">📍</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C12 22 19 15.5 19 10C19 6.13401 15.866 3 12 3C8.13401 3 5 6.13401 5 10C5 15.5 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Адрес:</strong><br>
-                            Karadžičova 8<br>
-                            821 08 Bratislava, Slovakia
+                            <a href="https://maps.app.goo.gl/Q8Ha8i19Vg7XQZvW9" target="_blank">Karadžičova 8<br>
+                            821 08 Bratislava, Slovakia</a>
                         </div>
                     </div>
                 </div>
@@ -52,21 +57,35 @@
                 <div class="footer__section">
                     <h4>Контакты</h4>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true">📞</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92V19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21C15.221 21 10.683 19.157 7.51472 15.9887C4.34641 12.8203 2.5 8.279 2.5 3.5C2.5 2.96957 2.71071 2.46086 3.08579 2.08579C3.46086 1.71071 3.96957 1.5 4.5 1.5H6.58C6.82601 1.49978 7.06864 1.55867 7.28665 1.67033C7.50466 1.78198 7.69147 1.94253 7.83 2.14L9.62 4.69C9.7782 4.91951 9.86256 5.1947 9.86078 5.47622C9.85899 5.75774 9.77114 6.03196 9.61 6.26L8.21 8.26C9.29788 10.6406 11.3594 12.7021 13.74 13.79L15.74 12.39C15.968 12.2286 16.2429 12.1407 16.5241 12.139C16.8053 12.1373 17.0809 12.2218 17.31 12.38L19.86 14.17C20.0575 14.3091 20.2177 14.4955 20.3291 14.7137C20.4404 14.9319 20.4985 15.1751 20.5 15.42V16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Телефон:</strong><br>
                             <a href="tel:+421940327781" class="footer__link">+421 940 327 781</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true">✉️</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1046 4 22 4.89543 22 6V18C22 19.1046 21.1046 20 20 20H4C2.89543 20 2 19.1046 2 18V6C2 4.89543 2.89543 4 4 4Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Email:</strong><br>
                             <a href="mailto:hello@vazirlo.com" class="footer__link">hello@vazirlo.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon" aria-hidden="true">🕒</div>
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <div>
                             <strong>Часы работы:</strong><br>
                             Пн–Пт, 9:00–18:00 CET

@@ -187,26 +187,52 @@ include 'partials/header.php';
         </div>
         
         <div class="grid grid--4">
-            <div class="card text-center slide-up">
-                <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-md);">🥇</div>
+            <div class="card cert-card text-center slide-up">
+                <div class="cert-icon" aria-hidden="true">
+                    <!-- Analytics icon -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M10 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16 20V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h4>Google Analytics</h4>
                 <p class="text-muted">Certified Professional</p>
             </div>
             
-            <div class="card text-center slide-up">
-                <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-md);">🎯</div>
+            <div class="card cert-card text-center slide-up">
+                <div class="cert-icon" aria-hidden="true">
+                    <!-- Ads/Target icon -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 2V6M22 12H18M12 22V18M2 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h4>Google Ads</h4>
                 <p class="text-muted">Certified Specialist</p>
             </div>
             
-            <div class="card text-center slide-up">
-                <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-md);">📈</div>
+            <div class="card cert-card text-center slide-up">
+                <div class="cert-icon" aria-hidden="true">
+                    <!-- Certificate/Ribbon icon -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="9" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M9 14L7 21L12 18L17 21L15 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <h4>Facebook Blueprint</h4>
                 <p class="text-muted">Certified Professional</p>
             </div>
             
-            <div class="card text-center slide-up">
-                <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-md);">🔍</div>
+            <div class="card cert-card text-center slide-up">
+                <div class="cert-icon" aria-hidden="true">
+                    <!-- Flame/Heat icon for Hotjar -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3C12 3 8 6 8 10C8 12.7614 10.2386 15 13 15C14.6569 15 16 13.6569 16 12C16 10 15 9 15 9C15 12 13 13 12 13C10.8954 13 10 12.1046 10 11C10 8 12 6 12 6C12 6 18 9 18 14C18 17.3137 15.3137 20 12 20C8.68629 20 6 17.3137 6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <h4>Hotjar</h4>
                 <p class="text-muted">Certified Partner</p>
             </div>
@@ -215,44 +241,93 @@ include 'partials/header.php';
 </section>
 
 <!-- Company Values -->
-<section class="section">
+<section class="section values">
+    <div class="values__bg" aria-hidden="true"></div>
     <div class="container">
         <div class="text-center mb-2xl">
             <h2 class="slide-up">Наши ценности</h2>
-            <p class="text-large text-muted slide-up">Принципы, которыми мы руководствуемся</p>
+            <p class="text-large text-muted slide-up">Принципы, которые формируют результат</p>
         </div>
-        
-        <div class="grid grid--2">
-            <div class="card slide-up">
-                <h3 style="color: var(--primary);">🎯 Прозрачность</h3>
-                <p>
-                    Все процессы, методы и результаты работы полностью прозрачны. 
-                    Вы всегда знаете, что мы делаем и почему.
-                </p>
+
+        <div class="values__list">
+            <div class="values__item slide-left">
+                <div class="values__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12C3 7.58172 6.58172 4 11 4C15.4183 4 19 7.58172 19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M19 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="11" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="values__content">
+                    <h3>Прозрачность</h3>
+                    <p class="text-muted">Полная ясность процессов, методик и результатов. Доступ к данным и статусу — всегда открытый.</p>
+                </div>
             </div>
-            
-            <div class="card slide-up">
-                <h3 style="color: var(--primary);">📈 Ориентация на результат</h3>
-                <p>
-                    Измеряем успех только конкретными бизнес-метриками: 
-                    рост продаж, увеличение прибыли, снижение затрат.
-                </p>
+
+            <div class="values__item slide-right">
+                <div class="values__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M10 18V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M16 18V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="values__content">
+                    <h3>Ориентация на результат</h3>
+                    <p class="text-muted">Измеряем успех метриками бизнеса: рост выручки, снижение затрат, увеличение LTV.</p>
+                </div>
             </div>
-            
-            <div class="card slide-up">
-                <h3 style="color: var(--primary);">🤝 Партнёрский подход</h3>
-                <p>
-                    Мы не просто исполнители, а стратегические партнёры. 
-                    Вкладываемся в ваш успех как в свой собственный.
-                </p>
+
+            <div class="values__item slide-left">
+                <div class="values__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="values__content">
+                    <h3>Партнерство</h3>
+                    <p class="text-muted">Работаем как единая команда с клиентом. Долгосрочные цели важнее краткосрочных задач.</p>
+                </div>
             </div>
-            
-            <div class="card slide-up">
-                <h3 style="color: var(--primary);">🎓 Постоянное обучение</h3>
-                <p>
-                    Сфера аналитики развивается быстро. Мы изучаем новые инструменты 
-                    и методы, чтобы предлагать лучшие решения.
-                </p>
+
+            <div class="values__item slide-right">
+                <div class="values__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L8 6V10L12 12L16 10V6L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M8 14H16V18H8V14Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="values__content">
+                    <h3>Постоянное обучение</h3>
+                    <p class="text-muted">Всегда на острие инструментов и практик: GA4, server-side, MMM, incrementality.</p>
+                </div>
+            </div>
+
+            <div class="values__item slide-left">
+                <div class="values__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.68629 2 6 4.68629 6 8C6 10.2091 7.34315 12.2091 9.5 13M12 22V18M12 18C9.79086 18 8 16.2091 8 14C8 11.7909 9.79086 10 12 10C14.2091 10 16 11.7909 16 14C16 16.2091 14.2091 18 12 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="values__content">
+                    <h3>Инновации</h3>
+                    <p class="text-muted">Экспериментируем и внедряем лучшее: прогнозирование, автоматизация, персонализация.</p>
+                </div>
+            </div>
+
+            <div class="values__item slide-right">
+                <div class="values__icon" aria-hidden="true">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 3L3 9V21H21V9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M9 13L11 15L15 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="values__content">
+                    <h3>Конфиденциальность и этика</h3>
+                    <p class="text-muted">GDPR-by-design: минимизация сборов, безопасность данных и этичные подходы.</p>
+                </div>
             </div>
         </div>
     </div>
