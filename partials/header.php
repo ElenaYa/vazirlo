@@ -1,11 +1,8 @@
 <?php
-/* partials/header.php */
 
-// Get current page for active navigation
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
 $current_dir = basename(dirname($_SERVER['PHP_SELF']));
 
-// Helper function to check if navigation item is active
 function isActive($page, $current_page, $current_dir = '') {
     if ($current_dir === 'legal' && $page === 'legal') {
         return true;
@@ -13,7 +10,6 @@ function isActive($page, $current_page, $current_dir = '') {
     return $page === $current_page;
 }
 
-// Site configuration
 $site_name = "Vazirlo";
 $site_description = "Повышение продаж через веб-аналитику";
 ?>
@@ -25,50 +21,41 @@ $site_description = "Повышение продаж через веб-анал�
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- SEO Meta Tags -->
     <title><?php echo isset($page_title) ? $page_title . ' | ' . $site_name : $site_name . ' | ' . $site_description; ?></title>
     <meta name="description" content="<?php echo isset($page_description) ? $page_description : 'Профессиональные услуги веб-аналитики для увеличения конверсии и продаж. Аудит, настройка отслеживания, дашборды и A/B тестирование.'; ?>">
     <meta name="keywords" content="веб-аналитика, Google Analytics, конверсия, A/B тестирование, дашборды, отслеживание, электронная торговля, Vazirlo">
     <meta name="author" content="<?php echo $site_name; ?>">
     <meta name="robots" content="index, follow">
     
-    <!-- Canonical URL -->
     <link rel="canonical" href="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
     
-    <!-- Open Graph Meta Tags -->
     <meta property="og:site_name" content="<?php echo $site_name; ?>">
     <meta property="og:title" content="<?php echo isset($page_title) ? $page_title : $site_name; ?>">
     <meta property="og:description" content="<?php echo isset($page_description) ? $page_description : 'Профессиональные услуги веб-аналитики для увеличения конверсии и продаж'; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="og:image" content="<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>/assets/img/dashboard-hero.jpg">
+    <meta property="og:image" content="<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>assets/img/dashboard-hero.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="ru_RU">
     
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo isset($page_title) ? $page_title : $site_name; ?>">
     <meta name="twitter:description" content="<?php echo isset($page_description) ? $page_description : 'Профессиональные услуги веб-аналитики для увеличения конверсии и продаж'; ?>">
-    <meta name="twitter:image" content="<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>/assets/img/dashboard-hero.jpg">
+    <meta name="twitter:image" content="<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>assets/img/dashboard-hero.jpg">
     
-    <!-- Favicons -->
     <link rel="icon" type="image/png" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/favicon.png">
     <link rel="shortcut icon" type="image/png" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/favicon.png">
     <link rel="apple-touch-icon" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/favicon.png">
     
-    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
     
-    <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.google-analytics.com">
     
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/css/styles.css">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -76,7 +63,7 @@ $site_description = "Повышение продаж через веб-анал�
         "name": "<?php echo $site_name; ?>",
         "description": "<?php echo $site_description; ?>",
         "url": "<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>",
-        "logo": "<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>/assets/img/logo.png",
+        "logo": "<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>assets/img/logo.png",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+421940327781",
@@ -95,7 +82,6 @@ $site_description = "Повышение продаж через веб-анал�
     }
     </script>
     
-    <!-- Preload critical resources -->
     <link rel="preload" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/css/styles.css" as="style">
     <link rel="preload" href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/js/main.js" as="script">
     
@@ -106,16 +92,13 @@ $site_description = "Повышение продаж через веб-анал�
 <body>
     
     
-    <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
             <div class="header__container">
-                <!-- Logo Text -->
                 <a href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>index.php" class="logo-text" aria-label="Vazirlo - Главная страница">
                     Vazirlo
                 </a>
                 
-                <!-- Navigation -->
                 <nav class="nav" id="navigation" role="navigation" aria-label="Основная навигация">
                     <ul class="nav__list">
                         <li class="nav__item">
@@ -149,12 +132,10 @@ $site_description = "Повышение продаж через веб-анал�
                     </ul>
                 </nav>
                 
-                <!-- Logo Image -->
                 <a href="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>index.php" class="logo-image" aria-label="Vazirlo - Главная страница">
                     <img src="<?php echo ($current_dir === 'legal') ? '../' : ''; ?>assets/img/logo.webp" alt="Vazirlo логотип" width="40" height="40">
                 </a>
                 
-                <!-- Mobile menu burger -->
                 <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="navigation">
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
@@ -164,5 +145,4 @@ $site_description = "Повышение продаж через веб-анал�
         </div>
     </header>
     
-    <!-- Main content -->
     <main id="main-content" class="main" role="main">

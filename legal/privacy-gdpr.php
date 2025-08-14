@@ -1,5 +1,4 @@
 <?php
-/* legal/privacy-gdpr.php */
 
 $page_title = "Политика конфиденциальности GDPR";
 $page_description = "Политика конфиденциальности Vazirlo в соответствии с требованиями GDPR. Информация о сборе, обработке и защите персональных данных.";
@@ -12,7 +11,6 @@ $breadcrumbs = [
 include '../partials/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section section--hero">
     <div class="container">
         <div class="text-center fade-in">
@@ -27,7 +25,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Introduction -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -51,7 +48,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Data We Collect -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -78,7 +74,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Legal Basis -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -118,7 +113,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- How We Use Data -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -143,7 +137,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Data Sharing -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -193,7 +186,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Data Retention -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -243,7 +235,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Your Rights -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -327,7 +318,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Security -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -367,7 +357,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Complaints -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -396,7 +385,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Updates -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -421,7 +409,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Contact -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">

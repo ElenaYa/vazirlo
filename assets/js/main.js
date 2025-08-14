@@ -1,6 +1,4 @@
-/* assets/js/main.js */
 
-// ===== UTILITY FUNCTIONS =====
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
@@ -29,7 +27,6 @@ const throttle = (func, limit) => {
   }
 };
 
-// ===== HEADER FUNCTIONALITY =====
 class Header {
   constructor() {
     this.header = $('.header');
@@ -73,7 +70,6 @@ class Header {
       this.toggleMenu();
     });
     
-    // Close menu when clicking on links
     this.navLinks.forEach(link => {
       link.addEventListener('click', () => {
         if (this.isMenuOpen) {
@@ -82,14 +78,12 @@ class Header {
       });
     });
     
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (this.isMenuOpen && !this.nav.contains(e.target) && !this.burger.contains(e.target)) {
         this.closeMenu();
       }
     });
     
-    // Handle escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && this.isMenuOpen) {
         this.closeMenu();
@@ -111,7 +105,6 @@ class Header {
     this.isMenuOpen = true;
     document.body.style.overflow = 'hidden';
     
-    // Focus first menu item
     const firstLink = this.nav.querySelector('.nav__link');
     if (firstLink) {
       setTimeout(() => firstLink.focus(), 100);
@@ -160,14 +153,12 @@ class Header {
   }
 }
 
-// ===== SMOOTH SCROLLING =====
 class SmoothScroll {
   constructor() {
     this.init();
   }
   
   init() {
-    // Handle anchor links
     document.addEventListener('click', (e) => {
       const link = e.target.closest('a[href^="#"]');
       if (!link) return;
@@ -199,7 +190,6 @@ class SmoothScroll {
   }
 }
 
-// ===== INTERSECTION OBSERVER ANIMATIONS =====
 class ScrollAnimations {
   constructor() {
     this.elements = $$('.fade-in, .slide-up, .slide-left, .slide-right, .bounce-in');
@@ -210,11 +200,9 @@ class ScrollAnimations {
     if ('IntersectionObserver' in window) {
       this.setupObserver();
     } else {
-      // Fallback: show all elements immediately
       this.elements.forEach(el => el.classList.add('visible'));
     }
     
-    // Add staggered delays to grid items
     this.addStaggeredDelays();
   }
   
@@ -228,8 +216,7 @@ class ScrollAnimations {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          // Don't unobserve to allow repeated animations if needed
-          // observer.unobserve(entry.target);
+        
         }
       });
     }, options);
@@ -240,7 +227,6 @@ class ScrollAnimations {
   }
   
   addStaggeredDelays() {
-    // Add delays to grid items for staggered animation
     const grids = $$('.grid');
     grids.forEach(grid => {
       const items = grid.querySelectorAll('.card, .team-member, .pricing-card');
@@ -253,7 +239,6 @@ class ScrollAnimations {
   }
 }
 
-// ===== FORM HANDLING =====
 class FormHandler {
   constructor() {
     this.forms = $$('form');
@@ -264,7 +249,6 @@ class FormHandler {
     this.forms.forEach(form => {
       form.addEventListener('submit', (e) => this.handleSubmit(e));
       
-      // Real-time validation
       const inputs = form.querySelectorAll('input, textarea, select');
       inputs.forEach(input => {
         input.addEventListener('blur', () => this.validateField(input));
@@ -304,16 +288,13 @@ class FormHandler {
     let isValid = true;
     let errorMessage = '';
     
-    // Remove existing error
     this.clearFieldError(field);
     
-    // Required validation
     if (required && !value) {
       errorMessage = 'Это поле обязательно для заполнения';
       isValid = false;
     }
     
-    // Type-specific validation
     if (value && isValid) {
       switch (type) {
         case 'email':
@@ -343,7 +324,6 @@ class FormHandler {
       }
     }
     
-    // Show error if invalid
     if (!isValid) {
       this.showFieldError(field, errorMessage);
     }
@@ -371,7 +351,6 @@ class FormHandler {
   }
   
   submitForm(form) {
-    // Simulate form submission
     const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
     const originalText = submitButton?.textContent || submitButton?.value;
     
@@ -380,20 +359,16 @@ class FormHandler {
       submitButton.textContent = 'Отправка...';
     }
     
-    // Simulate API call
     setTimeout(() => {
       if (submitButton) {
         submitButton.disabled = false;
         submitButton.textContent = originalText;
       }
       
-      // Show success message
       this.showToast('Сообщение успешно отправлено!', 'success');
       
-      // Reset form
       form.reset();
       
-      // Clear any validation errors
       const errorElements = form.querySelectorAll('.form__error');
       errorElements.forEach(el => el.remove());
       
@@ -411,10 +386,8 @@ class FormHandler {
     
     document.body.appendChild(toast);
     
-    // Trigger animation
     setTimeout(() => toast.classList.add('show'), 100);
     
-    // Remove after delay
     setTimeout(() => {
       toast.classList.remove('show');
       setTimeout(() => {
@@ -426,7 +399,6 @@ class FormHandler {
   }
 }
 
-// ===== FAQ ACCORDION =====
 class FAQ {
   constructor() {
     this.faqItems = $$('.faq-item');
@@ -451,7 +423,6 @@ class FAQ {
   toggleItem(item) {
     const isActive = item.classList.contains('active');
     
-    // Close all items
     this.faqItems.forEach(faqItem => {
       faqItem.classList.remove('active');
       const answer = faqItem.querySelector('.faq-answer');
@@ -460,7 +431,6 @@ class FAQ {
       }
     });
     
-    // Open clicked item if it wasn't active
     if (!isActive) {
       item.classList.add('active');
       const answer = item.querySelector('.faq-answer');
@@ -471,7 +441,6 @@ class FAQ {
   }
 }
 
-// ===== COOKIE BANNER =====
 class CookieBanner {
   constructor() {
     this.banner = $('.cookie-banner');
@@ -485,27 +454,22 @@ class CookieBanner {
   init() {
     if (!this.banner) return;
     
-    // Check if user has already given consent
     try {
       const consent = localStorage.getItem(this.storageKey);
       if (!consent) {
         this.showBanner();
       } else {
-        // Try to parse if it's JSON, if not, treat as old format
         try {
           JSON.parse(consent);
         } catch (e) {
-          // Old format, clear and show banner
           localStorage.removeItem(this.storageKey);
           this.showBanner();
         }
       }
     } catch (e) {
-      // localStorage not available or other error
       this.showBanner();
     }
     
-    // Setup event listeners
     if (this.acceptBtn) {
       this.acceptBtn.addEventListener('click', () => this.acceptCookies());
     }
@@ -514,7 +478,6 @@ class CookieBanner {
       this.declineBtn.addEventListener('click', () => this.declineCookies());
     }
     
-    // Handle escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && this.banner.classList.contains('show')) {
         this.acceptCookies();
@@ -526,7 +489,6 @@ class CookieBanner {
     setTimeout(() => {
       this.banner.classList.add('show');
       
-      // Focus the accept button for accessibility
       if (this.acceptBtn) {
         this.acceptBtn.focus();
       }
@@ -568,7 +530,6 @@ class CookieBanner {
   }
 }
 
-// ===== PRICE CALCULATOR (for services page) =====
 class PriceCalculator {
   constructor() {
     this.calculator = $('.price-calculator');
@@ -584,7 +545,6 @@ class PriceCalculator {
       input.addEventListener('input', debounce(() => this.calculatePrice(), 300));
     });
     
-    // Initial calculation
     this.calculatePrice();
   }
   
@@ -593,7 +553,6 @@ class PriceCalculator {
     let basePrice = 0;
     let multiplier = 1;
     
-    // Base service price
     const service = formData.get('service');
     switch (service) {
       case 'audit':
@@ -609,7 +568,6 @@ class PriceCalculator {
         basePrice = 500;
     }
     
-    // Website complexity multiplier
     const complexity = formData.get('complexity');
     switch (complexity) {
       case 'simple':
@@ -634,7 +592,6 @@ class PriceCalculator {
   }
 }
 
-// ===== LAZY LOADING IMAGES =====
 class LazyLoader {
   constructor() {
     this.images = $$('img[data-src]');
@@ -645,7 +602,6 @@ class LazyLoader {
     if ('IntersectionObserver' in window) {
       this.setupObserver();
     } else {
-      // Fallback: load all images immediately
       this.images.forEach(img => this.loadImage(img));
     }
   }
@@ -678,20 +634,17 @@ class LazyLoader {
   }
 }
 
-// ===== PERFORMANCE MONITORING =====
 class PerformanceMonitor {
   constructor() {
     this.init();
   }
   
   init() {
-    // Monitor page load performance
     window.addEventListener('load', () => {
       setTimeout(() => {
         if ('performance' in window && 'getEntriesByType' in performance) {
           const navigation = performance.getEntriesByType('navigation')[0];
           
-          // Log key metrics (in a real app, send to analytics)
           const metrics = {
             loadTime: Math.round(navigation.loadEventEnd - navigation.fetchStart),
             domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.fetchStart),
@@ -699,7 +652,6 @@ class PerformanceMonitor {
             largestContentfulPaint: this.getLCP()
           };
           
-          console.log('Performance Metrics:', metrics);
         }
       }, 0);
     });
@@ -722,7 +674,6 @@ class PerformanceMonitor {
         
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
         
-        // Fallback timeout
         setTimeout(() => resolve(null), 5000);
       } else {
         resolve(null);
@@ -731,7 +682,6 @@ class PerformanceMonitor {
   }
 }
 
-// ===== DARK MODE TOGGLE (optional enhancement) =====
 class DarkMode {
   constructor() {
     this.toggle = $('.dark-mode-toggle');
@@ -742,7 +692,6 @@ class DarkMode {
   init() {
     if (!this.toggle) return;
     
-    // Check saved preference
     const savedMode = localStorage.getItem(this.storageKey);
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -750,10 +699,8 @@ class DarkMode {
       this.enableDarkMode();
     }
     
-    // Setup toggle
     this.toggle.addEventListener('click', () => this.toggleMode());
     
-    // Listen for system preference changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
       if (!localStorage.getItem(this.storageKey)) {
         if (e.matches) {
@@ -790,9 +737,7 @@ class DarkMode {
   }
 }
 
-// ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize all components
   new Header();
   new SmoothScroll();
   new ScrollAnimations();
@@ -804,10 +749,8 @@ document.addEventListener('DOMContentLoaded', () => {
   new PerformanceMonitor();
   new DarkMode();
   
-  // Add loaded class to body for CSS transitions
   document.body.classList.add('loaded');
   
-  // Announce page load to screen readers
   const announcement = document.createElement('div');
   announcement.textContent = 'Страница загружена';
   announcement.setAttribute('aria-live', 'polite');
@@ -819,22 +762,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 1000);
 });
 
-// ===== ERROR HANDLING =====
 window.addEventListener('error', (event) => {
   console.error('JavaScript Error:', event.error);
   
-  // In production, you might want to send this to an error tracking service
-  // trackError(event.error);
+
 });
 
 window.addEventListener('unhandledrejection', (event) => {
   console.error('Unhandled Promise Rejection:', event.reason);
   
-  // Prevent the default browser behavior
   event.preventDefault();
 });
 
-// ===== EXPORT FOR MODULE USAGE =====
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     Header,

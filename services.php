@@ -1,5 +1,4 @@
 <?php
-/* services.php */
 
 $page_title = "Услуги";
 $page_description = "Полный спектр услуг по веб-аналитике: аудит, настройка отслеживания, создание дашбордов, A/B тестирование и консультации. Повысьте конверсию вашего сайта с Vazirlo.";
@@ -12,7 +11,6 @@ $breadcrumbs = [
 include 'partials/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section section--hero analytics-bg">
     <div class="container">
         <div class="hero">
@@ -35,11 +33,9 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Services Overview -->
 <section class="section" id="services">
     <div class="container">
         <div class="services-list">
-            <!-- Audit -->
             <article class="service-card slide-up" id="audit">
                 <figure class="service-card__media">
                     <img src="assets/img/services-audit.jpg" alt="Аудит аналитики — проверка GA4, качества данных и схемы отслеживания" loading="lazy" width="1280" height="720">
@@ -70,7 +66,6 @@ include 'partials/header.php';
                 </footer>
             </article>
 
-            <!-- Tracking setup -->
             <article class="service-card slide-up" id="tracking">
                 <figure class="service-card__media">
                     <img src="assets/img/services-tracking.jpg" alt="Настройка отслеживания — GA4, GTM, события, цели, ecommerce" loading="lazy" width="1280" height="720">
@@ -100,7 +95,6 @@ include 'partials/header.php';
                 </footer>
             </article>
 
-            <!-- Dashboards -->
             <article class="service-card slide-up" id="dashboards">
                 <figure class="service-card__media">
                     <img src="assets/img/services-dashboards.jpg" alt="Дашборды и отчёты — единое окно показателей бизнеса" loading="lazy" width="1280" height="720">
@@ -132,7 +126,6 @@ include 'partials/header.php';
                 </footer>
             </article>
 
-            <!-- A/B testing -->
             <article class="service-card slide-up" id="optimization">
                 <figure class="service-card__media">
                     <img src="assets/img/services-abtest.jpg" alt="A/B тестирование — системная оптимизация конверсии" loading="lazy" width="1280" height="720">
@@ -162,7 +155,6 @@ include 'partials/header.php';
                 </footer>
             </article>
 
-            <!-- Consulting -->
             <article class="service-card slide-up" id="consulting">
                 <figure class="service-card__media">
                     <img src="assets/img/services-consulting.jpg" alt="Консультации — стратегия аналитики и обучение команды" loading="lazy" width="1280" height="720">
@@ -192,7 +184,6 @@ include 'partials/header.php';
                 </footer>
             </article>
 
-            <!-- Suite -->
             <article class="service-card slide-up">
                 <figure class="service-card__media">
                     <img src="assets/img/services-suite.jpg" alt="Комплексное решение — полный цикл работ под ключ" loading="lazy" width="1280" height="720">
@@ -225,7 +216,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Deliverables Section -->
 <section class="section section--alt" id="deliverables">
     <div class="container">
         <div class="text-center mb-2xl fade-in">
@@ -297,7 +287,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Pricing Section -->
 <section class="section" id="pricing">
     <div class="container">
         <div class="text-center mb-2xl fade-in">
@@ -358,7 +347,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Process Section -->
 <section class="section section--alt" id="process">
     <div class="container">
         <div class="text-center mb-2xl fade-in">
@@ -420,7 +408,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- FAQ Section -->
 <section class="section" id="faq">
     <div class="container">
         <div class="text-center mb-2xl fade-in">
@@ -492,7 +479,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section analytics-bg" style="background: linear-gradient(135deg, var(--primary) 0%, #1e42cc 100%); color: white;">
     <div class="container">
         <div class="text-center fade-in">

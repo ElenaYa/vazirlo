@@ -1,21 +1,16 @@
 <?php
-/* about.php */
 
-// Page-specific SEO data
 $page_title = "О нас";
 $page_description = "Vazirlo - команда экспертов по веб-аналитике с опытом более 7 лет. Наша миссия - помочь бизнесу принимать решения на основе данных и увеличивать прибыль.";
 
-// Breadcrumbs
 $breadcrumbs = [
     ['name' => 'Главная', 'url' => 'https://' . $_SERVER['HTTP_HOST'] . '/index.php'],
     ['name' => 'О нас', 'url' => 'https://' . $_SERVER['HTTP_HOST'] . '/about.php']
 ];
 
-// Include header
 include 'partials/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section section--hero analytics-bg">
     <div class="container">
         <div class="hero">
@@ -43,7 +38,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Mission & Vision -->
 <section class="section">
     <div class="container">
         <div class="grid grid--2">
@@ -75,7 +69,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Our Approach -->
 <section id="approach" class="section section--alt">
     <div class="container">
         <div class="text-center mb-2xl">
@@ -130,7 +123,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Team -->
 <section id="team" class="section">
     <div class="container">
         <div class="text-center mb-2xl">
@@ -178,7 +170,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Certifications -->
 <section id="certifications" class="section section--alt">
     <div class="container">
         <div class="text-center mb-xl">
@@ -189,7 +180,6 @@ include 'partials/header.php';
         <div class="grid grid--4">
             <div class="card cert-card text-center slide-up">
                 <div class="cert-icon" aria-hidden="true">
-                    <!-- Analytics icon -->
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 20V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         <path d="M10 20V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -203,7 +193,6 @@ include 'partials/header.php';
             
             <div class="card cert-card text-center slide-up">
                 <div class="cert-icon" aria-hidden="true">
-                    <!-- Ads/Target icon -->
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
                         <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
@@ -216,7 +205,6 @@ include 'partials/header.php';
             
             <div class="card cert-card text-center slide-up">
                 <div class="cert-icon" aria-hidden="true">
-                    <!-- Certificate/Ribbon icon -->
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="9" r="5" stroke="currentColor" stroke-width="2"/>
                         <path d="M9 14L7 21L12 18L17 21L15 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -228,7 +216,6 @@ include 'partials/header.php';
             
             <div class="card cert-card text-center slide-up">
                 <div class="cert-icon" aria-hidden="true">
-                    <!-- Flame/Heat icon for Hotjar -->
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 3C12 3 8 6 8 10C8 12.7614 10.2386 15 13 15C14.6569 15 16 13.6569 16 12C16 10 15 9 15 9C15 12 13 13 12 13C10.8954 13 10 12.1046 10 11C10 8 12 6 12 6C12 6 18 9 18 14C18 17.3137 15.3137 20 12 20C8.68629 20 6 17.3137 6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -240,7 +227,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Company Values -->
 <section class="section values">
     <div class="values__bg" aria-hidden="true"></div>
     <div class="container">
@@ -333,7 +319,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Timeline -->
 <section class="section section--alt">
     <div class="container">
         <div class="text-center mb-2xl">
@@ -390,7 +375,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Extended Case Studies -->
 <section id="cases" class="section">
     <div class="container">
         <div class="text-center mb-2xl">
@@ -398,7 +382,6 @@ include 'partials/header.php';
             <p class="text-large text-muted slide-up">Глубокий анализ наших проектов</p>
         </div>
         
-        <!-- Case Study 1 - Detailed -->
         <div class="card slide-up mb-xl">
             <div class="grid grid--2">
                 <div>
@@ -432,7 +415,6 @@ include 'partials/header.php';
             </div>
         </div>
         
-        <!-- Case Study 2 - Detailed -->
         <div class="card slide-up mb-xl">
             <div class="grid grid--2">
                 <div>
@@ -466,7 +448,6 @@ include 'partials/header.php';
             </div>
         </div>
         
-        <!-- Case Study 3 - Detailed -->
         <div id="case-study-3" class="card slide-up mb-xl">
             <div class="grid grid--2">
                 <div>
@@ -508,6 +489,5 @@ include 'partials/header.php';
 </section>
 
 <?php
-// Include footer
 include 'partials/footer.php';
 ?>

@@ -1,5 +1,4 @@
 <?php
-/* contacts.php */
 
 $page_title = "Контакты";
 $page_description = "Свяжитесь с Vazirlo для получения консультации по веб-аналитике. Телефон: +421 940 327 781, Email: hello@vazirlo.com. Офис в Братиславе, Словакия.";
@@ -12,7 +11,6 @@ $breadcrumbs = [
 include 'partials/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section section--hero analytics-bg">
     <div class="container">
         <div class="hero">
@@ -37,11 +35,9 @@ include 'partials/header.php';
     
 </section>
 
-<!-- Contact Form & Info Section -->
 <section class="section">
     <div class="container">
         <div class="grid grid--2">
-            <!-- Contact Form -->
             <div class="fade-in">
                 <h2>Получить консультацию</h2>
                 <p class="text-muted mb-lg">
@@ -134,7 +130,6 @@ include 'partials/header.php';
                 </form>
             </div>
             
-            <!-- Contact Information -->
             <div class="slide-up">
                 <div class="contact-info">
                     <h3 style="margin-bottom: var(--space-lg);">Контактная информация</h3>
@@ -216,7 +211,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Map Section -->
 <section class="section section--alt">
     <div class="container">
         <div class="text-center mb-xl fade-in">
@@ -241,7 +235,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- FAQ Section -->
 <section class="section section--alt">
     <div class="container">
         <div class="text-center mb-2xl fade-in">

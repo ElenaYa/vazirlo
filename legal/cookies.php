@@ -1,5 +1,4 @@
 <?php
-/* legal/cookies.php */
 
 $page_title = "Политика использования Cookies";
 $page_description = "Информация о том, как Vazirlo использует cookies и другие технологии отслеживания на нашем веб-сайте. Управление настройками cookies.";
@@ -65,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
 include '../partials/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section section--hero">
     <div class="container">
         <div class="text-center fade-in">
@@ -80,7 +78,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- What are Cookies -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -110,7 +107,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Cookie Categories -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -209,7 +205,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Cookie Management -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -261,7 +256,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Third Party Services -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -314,7 +308,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Your Choices -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -362,7 +355,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Updates -->
 <section class="section section--alt">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="slide-up">
@@ -387,7 +379,6 @@ include '../partials/header.php';
     </div>
 </section>
 
-<!-- Contact -->
 <section class="section">
     <div class="container">
         <div style="max-width: 800px; margin: 0 auto;" class="fade-in">
@@ -410,7 +401,6 @@ include '../partials/header.php';
 </section>
 
 <script>
-// Update status indicators
 document.addEventListener('DOMContentLoaded', function() {
     const consent = JSON.parse(localStorage.getItem('cookieConsent') || '{}');
     

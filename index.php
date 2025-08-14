@@ -1,15 +1,11 @@
 <?php
-/* index.php */
 
-// Page-specific SEO data
 $page_title = "Главная";
 $page_description = "Vazirlo - профессиональные услуги веб-аналитики для увеличения конверсии и продаж. Аудит, настройка отслеживания, дашборды и A/B тестирование в Bratislava, Slovakia.";
 
-// Include header
 include 'partials/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="section section--hero analytics-bg">
     <div class="container">
         <div class="hero">
@@ -42,7 +38,6 @@ include 'partials/header.php';
     
 </section>
 
-<!-- Insight Spotlight (Full-bleed) -->
 <section class="section section--insight">
     <div class="insight__bg"></div>
     <div class="container">
@@ -94,7 +89,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- KPI Section -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-xl">
@@ -130,11 +124,9 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Pain Points & Benefits -->
 <section class="section section--alt">
     <div class="container">
         <div class="grid grid--2">
-            <!-- Pain Points -->
             <div class="slide-up">
                 <h2 style="color: var(--accent);">Знакомые проблемы?</h2>
                 <div class="mb-lg">
@@ -155,7 +147,6 @@ include 'partials/header.php';
                 </div>
             </div>
             
-            <!-- Benefits -->
             <div class="slide-up">
                 <h2 style="color: var(--primary);">Наше решение</h2>
                 <div class="mb-lg">
@@ -179,7 +170,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- How It Works -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-2xl">
@@ -227,7 +217,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Case Studies -->
 <section class="section section--alt">
     <div class="container">
         <div class="text-center mb-2xl">
@@ -236,7 +225,6 @@ include 'partials/header.php';
         </div>
         
         <div class="grid grid--3">
-            <!-- Case Study 1 -->
             <div class="card slide-up">
                 <img src="assets/img/case-study-1.jpg" 
                      alt="График роста конверсии интернет-магазина после оптимизации аналитики"
@@ -255,7 +243,6 @@ include 'partials/header.php';
                 </div>
             </div>
             
-            <!-- Case Study 2 -->
             <div class="card slide-up">
                 <img src="assets/img/analytics-team.jpg" 
                      alt="Дашборд с метриками SaaS платформы показывающий рост пользователей"
@@ -274,7 +261,6 @@ include 'partials/header.php';
                 </div>
             </div>
             
-            <!-- Case Study 3 -->
             <div class="card slide-up">
                 <img src="assets/img/case-study-2.jpg" 
                      alt="Аналитический дашборд с ROI метриками рекламных кампаний"
@@ -302,7 +288,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Client Logos -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-xl">
@@ -310,7 +295,6 @@ include 'partials/header.php';
             <p class="text-muted slide-up">Более 50 успешных проектов в различных нишах</p>
         </div>
         
-        <!-- Placeholder for client logos -->
         <div class="grid grid--4 slide-up">
             <div class="card text-center" style="padding: var(--space-lg); background: var(--surface);">
                 <div style="color: var(--muted); margin-bottom: var(--space-sm); display: flex; justify-content: center;">
@@ -354,7 +338,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section analytics-bg" style="background: linear-gradient(135deg, var(--primary) 0%, #1e42cc 100%); color: white;">
     <div class="container">
         <div class="text-center">
@@ -388,7 +371,6 @@ include 'partials/header.php';
 </section>
 
 <?php
-// Additional structured data for homepage
 $additional_scripts = '
 <script type="application/ld+json">
 {
@@ -434,6 +416,5 @@ $additional_scripts = '
 </script>
 ';
 
-// Include footer
 include 'partials/footer.php';
 ?>
