@@ -12,27 +12,83 @@ include 'partials/header.php';
 <!-- Hero Section -->
 <section class="section section--hero analytics-bg">
     <div class="container">
-        <div class="hero fade-in">
-            <h1 class="hero__title">
-                Повышаем продажи через <span style="color: var(--primary);">веб-аналитику</span>
-            </h1>
-            <p class="hero__subtitle">
-                Превращаем данные в прибыль. Профессиональная настройка аналитики, 
-                оптимизация конверсий и увеличение ROI для вашего бизнеса.
-            </p>
-            <div class="hero__actions">
-                <a href="contacts.php" class="btn btn--primary btn--large">
-                    Получить аудит бесплатно
-                </a>
-                <a href="services.php" class="btn btn--secondary btn--large">
-                    Наши услуги
-                </a>
+        <div class="hero">
+            <div class="hero__grid">
+                <div class="hero__media slide-left">
+                    <img src="assets/img/dashboard-hero.jpg" 
+                         alt="Современный дашборд веб-аналитики Vazirlo с ключевыми метриками и графиками роста продаж"
+                         loading="eager" width="900" height="560">
+                </div>
+                <div class="hero__content slide-right">
+                    <h1 class="hero__title">
+                        Повышаем продажи через <span style="color: var(--primary);">веб-аналитику</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Превращаем данные в прибыль. Профессиональная настройка аналитики, 
+                        оптимизация конверсий и увеличение ROI для вашего бизнеса.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="contacts.php" class="btn btn--primary btn--large">
+                            Получить аудит бесплатно
+                        </a>
+                        <a href="services.php" class="btn btn--secondary btn--large">
+                            Наши услуги
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="hero__image">
-                 <img src="assets/img/dashboard-hero.jpg" 
-                      alt="Современный дашборд веб-аналитики Vazirlo с ключевыми метриками и графиками роста продаж"
-                     loading="eager"
-                     width="800" height="450">
+        </div>
+    </div>
+    
+</section>
+
+<!-- Insight Spotlight (Full-bleed) -->
+<section class="section section--insight">
+    <div class="insight__bg"></div>
+    <div class="container">
+        <div class="insight__grid">
+            <div class="insight__media insight__media--left slide-left">
+                <img src="assets/img/insight-attribution.jpg" alt="Атрибуция конверсий на дашборде Vazirlo" loading="lazy" width="720" height="540">
+            </div>
+            <div class="insight__content slide-up">
+                <h2 class="gradient-text" style="margin-bottom: var(--space-md);">Найдём рост, где его не видно</h2>
+                <p class="text-large" style="color: var(--text-light); max-width: 640px;">
+                    Мы соединяем поведенческие данные, атрибуцию и сегментацию в единую картину. 
+                    Чтобы вы видели не просто цифры — а решения, на которых растёт бизнес.
+                </p>
+                <div class="insight__stats">
+                    <div class="insight__stat">
+                        <div class="kpi-number">+38%</div>
+                        <div class="kpi-label">Конверсии из нефинансируемых каналов</div>
+                    </div>
+                    <div class="insight__stat">
+                        <div class="kpi-number">-27%</div>
+                        <div class="kpi-label">Снижение пересекающейся атрибуции</div>
+                    </div>
+                    <div class="insight__stat">
+                        <div class="kpi-number">+2.4x</div>
+                        <div class="kpi-label">Рост LTV в приоритетных сегментах</div>
+                    </div>
+                </div>
+                <div class="hero__actions" style="margin-top: var(--space-xl);">
+                    <a href="services.php#dashboards" class="btn btn--primary btn--large">Посмотреть примеры</a>
+                    <a href="contacts.php" class="btn btn--secondary btn--large">Обсудить внедрение</a>
+                </div>
+            </div>
+            <div class="insight__media insight__media--right slide-right">
+                <img src="assets/img/insight-segmentation.jpg" alt="Сегментация аудитории на визуальном дашборде Vazirlo" loading="lazy" width="720" height="540">
+            </div>
+        </div>
+    </div>
+    <div class="insight__stripe">
+        <div class="container insight__stripe-inner">
+            <div class="insight__stripe-media">
+                <img src="assets/img/insight-journey.jpg" alt="Карта пользовательского пути: от первого касания до покупки" loading="lazy" width="960" height="360">
+            </div>
+            <div class="insight__stripe-content">
+                <h3 class="gradient-text">Прозрачный путь клиента</h3>
+                <p class="text-muted">От первого визита до покупки — все точки касания, влияние каналов и реальная ценность каждого клика. Наша система аналитики отслеживает полный путь пользователя через все устройства и каналы, учитывая как онлайн, так и офлайн взаимодействия.</p>
+                <p class="text-muted">Вы получаете детальное понимание того, какие каналы и кампании реально приносят результат, как пользователи взаимодействуют с вашим сайтом, и где находятся точки роста конверсии. Это позволяет принимать более точные маркетинговые решения и оптимизировать рекламные бюджеты.</p>
             </div>
         </div>
     </div>
@@ -220,7 +276,7 @@ include 'partials/header.php';
             
             <!-- Case Study 3 -->
             <div class="card slide-up">
-                <img src="assets/img/dashboard-hero.jpg" 
+                <img src="assets/img/case-study-2.jpg" 
                      alt="Аналитический дашборд с ROI метриками рекламных кампаний"
                      loading="lazy" width="300" height="200"
                      style="border-radius: var(--radius-md); margin-bottom: var(--space-md);">
@@ -257,22 +313,40 @@ include 'partials/header.php';
         <!-- Placeholder for client logos -->
         <div class="grid grid--4 slide-up">
             <div class="card text-center" style="padding: var(--space-lg); background: var(--surface);">
-                <div style="font-size: var(--font-size-2xl); color: var(--muted); margin-bottom: var(--space-sm);">🛒</div>
+                <div style="color: var(--muted); margin-bottom: var(--space-sm); display: flex; justify-content: center;">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M6 6H4M6 6H20L18 14H7L6 6ZM6 6L7 14M9 20C8.44772 20 8 19.5523 8 19C8 18.4477 8.44772 18 9 18C9.55228 18 10 18.4477 10 19C10 19.5523 9.55228 20 9 20ZM16 20C15.4477 20 15 19.5523 15 19C15 18.4477 15.4477 18 16 18C16.5523 18 17 18.4477 17 19C17 19.5523 16.5523 20 16 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <strong>E-commerce</strong>
                 <p class="text-muted">Интернет-магазины</p>
             </div>
             <div class="card text-center" style="padding: var(--space-lg); background: var(--surface);">
-                <div style="font-size: var(--font-size-2xl); color: var(--muted); margin-bottom: var(--space-sm);">💼</div>
+                <div style="color: var(--muted); margin-bottom: var(--space-sm); display: flex; justify-content: center;">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M10 6V4C10 3.44772 10.4477 3 11 3H13C13.5523 3 14 3.44772 14 4V6M4 9H20C21.1046 9 22 9.89543 22 11V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17V11C2 9.89543 2.89543 9 4 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <strong>SaaS</strong>
                 <p class="text-muted">Программные продукты</p>
             </div>
             <div class="card text-center" style="padding: var(--space-lg); background: var(--surface);">
-                <div style="font-size: var(--font-size-2xl); color: var(--muted); margin-bottom: var(--space-sm);">🎓</div>
+                <div style="color: var(--muted); margin-bottom: var(--space-sm); display: flex; justify-content: center;">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 3L2 8L12 13L22 8L12 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 10V16C5 16 8 19 12 19C16 19 19 16 19 16V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <strong>EdTech</strong>
                 <p class="text-muted">Образовательные платформы</p>
             </div>
             <div class="card text-center" style="padding: var(--space-lg); background: var(--surface);">
-                <div style="font-size: var(--font-size-2xl); color: var(--muted); margin-bottom: var(--space-sm);">🏥</div>
+                <div style="color: var(--muted); margin-bottom: var(--space-sm); display: flex; justify-content: center;">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M19 7H14V5C14 4.44772 13.5523 4 13 4H11C10.4477 4 10 4.44772 10 5V7H5C3.89543 7 3 7.89543 3 9V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V9C21 7.89543 20.1046 7 19 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 13H15M12 10V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <strong>Healthcare</strong>
                 <p class="text-muted">Медицинские сервисы</p>
             </div>
@@ -294,9 +368,6 @@ include 'partials/header.php';
             <div class="slide-up">
                  <a href="contacts.php" class="btn btn--accent btn--large" style="margin-right: var(--space-md);">
                     Получить бесплатный аудит
-                </a>
-                <a href="tel:+421940327781" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid rgba(255,255,255,0.3);">
-                    +421 940 327 781
                 </a>
             </div>
             

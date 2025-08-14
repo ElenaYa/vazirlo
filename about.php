@@ -16,16 +16,29 @@ include 'partials/header.php';
 ?>
 
 <!-- Hero Section -->
-<section class="section section--hero">
+<section class="section section--hero analytics-bg">
     <div class="container">
-        <div class="hero fade-in">
-            <h1 class="hero__title">
-                О компании <span style="color: var(--primary);">Vazirlo</span>
-            </h1>
-            <p class="hero__subtitle">
-                Мы превращаем данные в прибыль для вашего бизнеса. Команда экспертов 
-                с опытом более 7 лет в области веб-аналитики и конверсионной оптимизации.
-            </p>
+        <div class="hero">
+            <div class="hero__grid">
+                <div class="hero__media slide-left">
+                    <img src="assets/img/analytics-dashboard.jpg"
+                         alt="Команда Vazirlo работает с дашбордами и аналитикой"
+                         loading="eager" width="900" height="560">
+                </div>
+                <div class="hero__content slide-right">
+                    <h1 class="hero__title">
+                        О компании <span style="color: var(--primary);">Vazirlo</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Мы превращаем данные в прибыль для вашего бизнеса. Команда экспертов с опытом более 7 лет
+                        в области веб-аналитики и конверсионной оптимизации.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="services.php" class="btn btn--primary btn--large">Наши услуги</a>
+                        <a href="contacts.php" class="btn btn--secondary btn--large">Связаться с нами</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -71,8 +84,13 @@ include 'partials/header.php';
         </div>
         
         <div class="grid grid--3">
-            <div class="card slide-up">
-                <div style="font-size: var(--font-size-3xl); color: var(--primary); margin-bottom: var(--space-md);">🔍</div>
+            <div class="card approach-card slide-up">
+                <div class="feature-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                        <line x1="16.65" y1="16.65" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h3 class="card__title">Глубокий анализ</h3>
                 <p>
                     Не делаем поспешных выводов. Тщательно изучаем ваш бизнес, 
@@ -80,8 +98,14 @@ include 'partials/header.php';
                 </p>
             </div>
             
-            <div class="card slide-up">
-                <div style="font-size: var(--font-size-3xl); color: var(--primary); margin-bottom: var(--space-md);">📊</div>
+            <div class="card approach-card slide-up">
+                <div class="feature-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="10" width="4" height="10" rx="1" stroke="currentColor" stroke-width="2"/>
+                        <rect x="10" y="6" width="4" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
+                        <rect x="17" y="2" width="4" height="18" rx="1" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
                 <h3 class="card__title">Данные превыше всего</h3>
                 <p>
                     Каждое решение основано на фактах и метриках. 
@@ -89,8 +113,13 @@ include 'partials/header.php';
                 </p>
             </div>
             
-            <div class="card slide-up">
-                <div style="font-size: var(--font-size-3xl); color: var(--primary); margin-bottom: var(--space-md);">🚀</div>
+            <div class="card approach-card slide-up">
+                <div class="feature-icon" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C9 5 8 7 8 9C8 11 9.5 12.5 11 13L12 22L13 13C14.5 12.5 16 11 16 9C16 7 15 5 12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M8 9L6 10M16 9L18 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h3 class="card__title">Фокус на результат</h3>
                 <p>
                     Работаем не ради процесса, а ради конкретных бизнес-результатов: 
@@ -111,7 +140,9 @@ include 'partials/header.php';
         
         <div class="team-grid">
             <div class="team-member slide-up">
-                <div class="team-member__avatar"></div>
+                <div class="team-member__avatar">
+                    <img src="assets/img/team-alexander.jpg" alt="Фото — Александр Петров, ведущий аналитик Vazirlo" loading="lazy" width="120" height="120">
+                </div>
                 <h3 class="team-member__name">Александр Петров</h3>
                 <div class="team-member__role">Ведущий аналитик</div>
                 <p class="team-member__bio">
@@ -121,7 +152,9 @@ include 'partials/header.php';
             </div>
             
             <div class="team-member slide-up">
-                <div class="team-member__avatar"></div>
+                <div class="team-member__avatar">
+                    <img src="assets/img/team-maria.jpg" alt="Фото — Мария Новакова, CRO-специалист Vazirlo" loading="lazy" width="120" height="120">
+                </div>
                 <h3 class="team-member__name">Мария Новакова</h3>
                 <div class="team-member__role">CRO-специалист</div>
                 <p class="team-member__bio">
@@ -131,7 +164,9 @@ include 'partials/header.php';
             </div>
             
             <div class="team-member slide-up">
-                <div class="team-member__avatar"></div>
+                <div class="team-member__avatar">
+                    <img src="assets/img/team-tomas.jpg" alt="Фото — Томаш Кованец, Data Engineer Vazirlo" loading="lazy" width="120" height="120">
+                </div>
                 <h3 class="team-member__name">Томаш Кованец</h3>
                 <div class="team-member__role">Data Engineer</div>
                 <p class="team-member__bio">
