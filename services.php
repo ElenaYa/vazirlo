@@ -13,13 +13,24 @@ include 'partials/header.php';
 ?>
 
 <!-- Hero Section -->
-<section class="section section--hero">
+<section class="section section--hero analytics-bg">
     <div class="container">
-        <div class="text-center fade-in">
-            <h1>Услуги веб-аналитики</h1>
-            <p class="hero__subtitle">
-                Полный спектр решений для роста вашего бизнеса через данные
-            </p>
+        <div class="hero">
+            <div class="hero__grid">
+                <div class="hero__media slide-left">
+                    <img src="assets/img/services-dashboard.jpg"
+                         alt="Дашборды и аналитика Vazirlo для роста бизнеса"
+                         loading="eager" width="900" height="560">
+                </div>
+                <div class="hero__content slide-right">
+                    <h1 class="hero__title">Услуги веб-аналитики</h1>
+                    <p class="hero__subtitle">Полный спектр решений для роста вашего бизнеса через данные</p>
+                    <div class="hero__actions">
+                        <a href="contacts.php" class="btn btn--primary btn--large" style="padding: 10px 20px;">Получить консультацию</a>
+                        <a href="about.php#cases" class="btn btn--secondary btn--large">Посмотреть кейсы</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -27,138 +38,189 @@ include 'partials/header.php';
 <!-- Services Overview -->
 <section class="section" id="services">
     <div class="container">
-        <div class="grid grid--3 fade-in">
-            <div class="card" id="audit">
-                <div class="card__header">
-                    <div style="background: var(--primary); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xl); margin-bottom: var(--space-md);">
-                        🔍
+        <div class="services-list">
+            <!-- Audit -->
+            <article class="service-card slide-up" id="audit">
+                <figure class="service-card__media">
+                    <img src="assets/img/services-audit.jpg" alt="Аудит аналитики — проверка GA4, качества данных и схемы отслеживания" loading="lazy" width="1280" height="720">
+                </figure>
+                <header class="service-card__header">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                            <line x1="16.65" y1="16.65" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <h3 class="card__title">Аудит аналитики</h3>
-                    <p class="card__subtitle">От €500</p>
-                </div>
-                <div class="card__content">
-                    <p>Комплексная проверка текущего состояния веб-аналитики с детальными рекомендациями по улучшению.</p>
-                    <ul style="margin: var(--space-md) 0; padding-left: var(--space-md);">
-                        <li>Анализ настроек Google Analytics</li>
-                        <li>Проверка корректности отслеживания</li>
-                        <li>Оценка качества данных</li>
-                        <li>План оптимизации</li>
+                    <div>
+                        <h3 class="service-card__title">Аудит аналитики</h3>
+                        <p class="service-card__subtitle">От €500</p>
+                    </div>
+                </header>
+                <div class="service-card__content">
+                    <p>Находим разрывы в данных и точки роста: проверяем GA4/GTM, схему событий, ecommerce, кросс-доменные сценарии и консистентность отчётов.</p>
+                    <ul>
+                        <li>GA4: структура ресурсов, потоки данных, аудит событий и параметров</li>
+                        <li>GTM: валидация триггеров, тегов, переменных, приоритетов</li>
+                        <li>Data quality: дубликаты, sampling, несоответствия атрибуции</li>
+                        <li>Roadmap: план исправлений и прироста метрик на 4–6 недель</li>
                     </ul>
                 </div>
-                <div class="card__footer">
+                <footer class="service-card__footer">
                     <a href="#pricing" class="btn btn--secondary">Подробнее</a>
-                </div>
-            </div>
-            
-            <div class="card" id="tracking">
-                <div class="card__header">
-                    <div style="background: var(--primary); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xl); margin-bottom: var(--space-md);">
-                        ⚙️
+                </footer>
+            </article>
+
+            <!-- Tracking setup -->
+            <article class="service-card slide-up" id="tracking">
+                <figure class="service-card__media">
+                    <img src="assets/img/services-tracking.jpg" alt="Настройка отслеживания — GA4, GTM, события, цели, ecommerce" loading="lazy" width="1280" height="720">
+                </figure>
+                <header class="service-card__header">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 13H20M4 17H14M4 7H10M14 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <h3 class="card__title">Настройка отслеживания</h3>
-                    <p class="card__subtitle">От €1200</p>
-                </div>
-                <div class="card__content">
-                    <p>Полная настройка систем аналитики для корректного сбора данных о пользователях и конверсиях.</p>
-                    <ul style="margin: var(--space-md) 0; padding-left: var(--space-md);">
-                        <li>Google Analytics 4 + GTM</li>
-                        <li>Enhanced Ecommerce</li>
-                        <li>Отслеживание событий</li>
-                        <li>Настройка целей и воронок</li>
+                    <div>
+                        <h3 class="service-card__title">Настройка отслеживания</h3>
+                        <p class="service-card__subtitle">От €1200</p>
+                    </div>
+                </header>
+                <div class="service-card__content">
+                    <p>Строим надёжный фундамент данных: корректные события, ecommerce, кросс-домены, server-side и интеграции.</p>
+                    <ul>
+                        <li>GA4 + GTM: архитектура событий и параметров под ваши KPI</li>
+                        <li>Enhanced Ecommerce / custom ecommerce</li>
+                        <li>Server-side tagging (по необходимости)</li>
+                        <li>Интеграции: CRM/BI, рекламные кабинеты, Consent Mode</li>
                     </ul>
                 </div>
-                <div class="card__footer">
+                <footer class="service-card__footer">
                     <a href="#pricing" class="btn btn--secondary">Подробнее</a>
-                </div>
-            </div>
-            
-            <div class="card" id="dashboards">
-                <div class="card__header">
-                    <div style="background: var(--primary); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xl); margin-bottom: var(--space-md);">
-                        📊
+                </footer>
+            </article>
+
+            <!-- Dashboards -->
+            <article class="service-card slide-up" id="dashboards">
+                <figure class="service-card__media">
+                    <img src="assets/img/services-dashboards.jpg" alt="Дашборды и отчёты — единое окно показателей бизнеса" loading="lazy" width="1280" height="720">
+                </figure>
+                <header class="service-card__header">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="10" width="4" height="10" rx="1" stroke="currentColor" stroke-width="2"/>
+                            <rect x="10" y="6" width="4" height="14" rx="1" stroke="currentColor" stroke-width="2"/>
+                            <rect x="17" y="2" width="4" height="18" rx="1" stroke="currentColor" stroke-width="2"/>
+                        </svg>
                     </div>
-                    <h3 class="card__title">Дашборды и отчёты</h3>
-                    <p class="card__subtitle">От €800</p>
-                </div>
-                <div class="card__content">
-                    <p>Автоматические дашборды с ключевыми метриками для ежедневного мониторинга эффективности бизнеса.</p>
-                    <ul style="margin: var(--space-md) 0; padding-left: var(--space-md);">
-                        <li>Google Data Studio дашборды</li>
-                        <li>Кастомные отчёты</li>
-                        <li>Автоматические алерты</li>
-                        <li>Mobile-friendly интерфейс</li>
+                    <div>
+                        <h3 class="service-card__title">Дашборды и отчёты</h3>
+                        <p class="service-card__subtitle">От €800</p>
+                    </div>
+                </header>
+                <div class="service-card__content">
+                    <p>Создаём наглядные отчёты с KPI, трендами и атрибуцией для быстрых решений руководства и маркетинга.</p>
+                    <ul>
+                        <li>Looker Studio / Power BI / Tableau — под вашу инфраструктуру</li>
+                        <li>Шаблоны по ролям: руководство, маркетинг, продукт, продажи</li>
+                        <li>Алерты аномалий и еженедельные дайджесты</li>
+                        <li>Документация и обучение команды</li>
                     </ul>
                 </div>
-                <div class="card__footer">
+                <footer class="service-card__footer">
                     <a href="#pricing" class="btn btn--secondary">Подробнее</a>
-                </div>
-            </div>
-            
-            <div class="card" id="optimization">
-                <div class="card__header">
-                    <div style="background: var(--primary); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xl); margin-bottom: var(--space-md);">
-                        🧪
+                </footer>
+            </article>
+
+            <!-- A/B testing -->
+            <article class="service-card slide-up" id="optimization">
+                <figure class="service-card__media">
+                    <img src="assets/img/services-abtest.jpg" alt="A/B тестирование — системная оптимизация конверсии" loading="lazy" width="1280" height="720">
+                </figure>
+                <header class="service-card__header">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 7H20M8 7L12 17M16 7L12 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <h3 class="card__title">A/B тестирование</h3>
-                    <p class="card__subtitle">От €1500</p>
-                </div>
-                <div class="card__content">
-                    <p>Системное тестирование гипотез для увеличения конверсии и прибыли на основе статистически значимых данных.</p>
-                    <ul style="margin: var(--space-md) 0; padding-left: var(--space-md);">
-                        <li>Аудит UX и выявление гипотез</li>
-                        <li>Дизайн экспериментов</li>
-                        <li>Запуск и мониторинг тестов</li>
-                        <li>Анализ результатов и внедрение</li>
+                    <div>
+                        <h3 class="service-card__title">A/B тестирование</h3>
+                        <p class="service-card__subtitle">От €1500</p>
+                    </div>
+                </header>
+                <div class="service-card__content">
+                    <p>Разворачиваем культуру экспериментов: от воронки гипотез до внедрения победителей и роста выручки.</p>
+                    <ul>
+                        <li>Backlog гипотез из аналитики и юзабилити-исследований</li>
+                        <li>Дизайн, запуск, мониторинг и статистический анализ</li>
+                        <li>Эксперименты на ключевых этапах воронки</li>
+                        <li>Плейбук масштабирования победивших вариантов</li>
                     </ul>
                 </div>
-                <div class="card__footer">
+                <footer class="service-card__footer">
                     <a href="#pricing" class="btn btn--secondary">Подробнее</a>
-                </div>
-            </div>
-            
-            <div class="card" id="consulting">
-                <div class="card__header">
-                    <div style="background: var(--primary); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xl); margin-bottom: var(--space-md);">
-                        💡
+                </footer>
+            </article>
+
+            <!-- Consulting -->
+            <article class="service-card slide-up" id="consulting">
+                <figure class="service-card__media">
+                    <img src="assets/img/services-consulting.jpg" alt="Консультации — стратегия аналитики и обучение команды" loading="lazy" width="1280" height="720">
+                </figure>
+                <header class="service-card__header">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L7 7H10V13H14V7H17L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <h3 class="card__title">Консультации</h3>
-                    <p class="card__subtitle">€120/час</p>
-                </div>
-                <div class="card__content">
-                    <p>Экспертные консультации по стратегии развития аналитики и оптимизации конверсии.</p>
-                    <ul style="margin: var(--space-md) 0; padding-left: var(--space-md);">
-                        <li>Стратегия аналитики</li>
-                        <li>Обучение команды</li>
-                        <li>Ревью текущих процессов</li>
-                        <li>Помощь в выборе инструментов</li>
+                    <div>
+                        <h3 class="service-card__title">Консультации</h3>
+                        <p class="service-card__subtitle">€120/час</p>
+                    </div>
+                </header>
+                <div class="service-card__content">
+                    <p>Помогаем выстроить стратегию аналитики, процессы и компетенции команды под цели роста.</p>
+                    <ul>
+                        <li>Стратегическая сессия: цели, KPI, карта метрик</li>
+                        <li>Архитектура данных и план внедрений</li>
+                        <li>Обучение, регламенты, SLA и контроль качества</li>
+                        <li>Сопровождение и ревью решений</li>
                     </ul>
                 </div>
-                <div class="card__footer">
+                <footer class="service-card__footer">
                     <a href="#pricing" class="btn btn--secondary">Подробнее</a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card__header">
-                    <div style="background: var(--primary); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xl); margin-bottom: var(--space-md);">
-                        🎯
+                </footer>
+            </article>
+
+            <!-- Suite -->
+            <article class="service-card slide-up">
+                <figure class="service-card__media">
+                    <img src="assets/img/services-suite.jpg" alt="Комплексное решение — полный цикл работ под ключ" loading="lazy" width="1280" height="720">
+                </figure>
+                <header class="service-card__header">
+                    <div class="service-card__icon" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 7H21M7 7V17C7 18.1046 7.89543 19 9 19H15C16.1046 19 17 18.1046 17 17V7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </div>
-                    <h3 class="card__title">Комплексное решение</h3>
-                    <p class="card__subtitle">От €3500</p>
-                </div>
-                <div class="card__content">
-                    <p>Полный цикл работ от аудита до запуска экспериментов — всё под ключ для максимального результата.</p>
-                    <ul style="margin: var(--space-md) 0; padding-left: var(--space-md);">
-                        <li>Все услуги в комплексе</li>
-                        <li>Приоритетная поддержка</li>
-                        <li>Гарантия результата</li>
-                        <li>Ежемесячная оптимизация</li>
+                    <div>
+                        <h3 class="service-card__title">Комплексное решение</h3>
+                        <p class="service-card__subtitle">От €3500</p>
+                    </div>
+                </header>
+                <div class="service-card__content">
+                    <p>Всё включено: от аудита и настройки до экспериментов и отчётности. Максимальная скорость внедрения и ROI.</p>
+                    <ul>
+                        <li>Один поток работ, единая команда и ответственность</li>
+                        <li>Приоритетная поддержка и быстрые итерации</li>
+                        <li>Фокус на бизнес-результат и прозрачные отчёты</li>
+                        <li>Непрерывная оптимизация и развитие</li>
                     </ul>
                 </div>
-                <div class="card__footer">
+                <footer class="service-card__footer">
                     <a href="#pricing" class="btn btn--primary">Популярный выбор</a>
-                </div>
-            </div>
+                </footer>
+            </article>
         </div>
     </div>
 </section>
@@ -431,19 +493,16 @@ include 'partials/header.php';
 </section>
 
 <!-- CTA Section -->
-<section class="section analytics-bg">
+<section class="section analytics-bg" style="background: linear-gradient(135deg, var(--primary) 0%, #1e42cc 100%); color: white;">
     <div class="container">
         <div class="text-center fade-in">
-            <h2>Готовы увеличить конверсию?</h2>
-            <p class="text-large text-muted mb-xl">
+            <h2 style="color: white; margin-bottom: var(--space-md);">Готовы увеличить конверсию?</h2>
+            <p class="text-large" style="color: rgba(255,255,255,0.9); margin-bottom: var(--space-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
                 Начните с бесплатной консультации — обсудим ваши задачи и подберём оптимальное решение
             </p>
             <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
                 <a href="contacts.php" class="btn btn--primary btn--large">
                     Получить консультацию
-                </a>
-                <a href="tel:+421940327781" class="btn btn--secondary btn--large">
-                    Позвонить сейчас
                 </a>
             </div>
         </div>
